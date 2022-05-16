@@ -1,0 +1,18 @@
+<!-- GET /answer?question=something_you_typed  -->
+
+<!-- Add a link to /ask on the answer.html.erb view using the link_to Rails helper.  -->
+<div class="m-3 w-100%">
+  <h2>Stupid Coaching</h2>
+  <blockquote class="blockquote p-2">
+    <p class="mb-3"><%= params[:question] %></p>
+    <footer class="blockquote-footer"><cite title="Source Title">You</cite></footer>
+  </blockquote>
+  <blockquote class="blockquote border-left border-dark p-2" style="background-color: #ffffe1">
+    <p class="mb-3"><strong><%= @answer %></strong></p>
+    <footer class="blockquote-footer"><cite title="Source Title">Your coach</cite></footer>
+  </blockquote>
+  <!-- <a href='/ask'> Ask a new question!</a>  -->
+  <%= link_to 'Ask a new question!', ask_path %>
+</div>
+
+<%# console %>
